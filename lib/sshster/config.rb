@@ -14,7 +14,7 @@ module Sshster
     private
 
     def parse_config(config_path)
-      YAML.safe_load(File.read(config_path))
+      YAML.safe_load(File.read(config_path)) || {}
     end
 
     def merge_config(config_path)

@@ -70,7 +70,7 @@ module Sshster
       def projects
         projects_paths.each do |project_path|
           data = parse_project(project_path)
-          hosts = data['hosts']
+          hosts = data['hosts'] if data
           yield(hosts) if hosts
         end
       end
