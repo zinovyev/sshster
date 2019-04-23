@@ -1,0 +1,60 @@
+foo
+
+ # === GENERATED === # 
+
+Host example.com
+  HostName example.com
+  User deploy
+  RequestTTY yes
+  RemoteCommand ssh-agent ; ssh-add ; screen -SRR deploy &>/dev/null || bash --login
+
+
+Host fooboobar.com
+  HostName fooboobar.com
+  User admin
+  RequestTTY yes
+  RemoteCommand ssh-agent ; ssh-add ; screen -SRR deploy &>/dev/null || bash --login
+
+
+Host group1.app1
+  HostName app.example.com
+  User deploy
+  RequestTTY yes
+  RemoteCommand ssh-agent ; ssh-add ; screen -SRR deploy &>/dev/null || bash --login
+
+
+Host group1.app2
+  HostName app.example.net
+  User deploy
+  RequestTTY yes
+  RemoteCommand ssh-agent ; ssh-add ; screen -SRR deploy &>/dev/null || bash --login
+
+
+Host group1.db1
+  HostName db.example.org
+  User admin
+  RequestTTY yes
+  RemoteCommand ssh-agent ; ssh-add ; screen -SRR deploy &>/dev/null || bash --login
+
+
+Host group2.app1
+  HostName app.example.com
+  User admin
+  RequestTTY yes
+  RemoteCommand ssh-agent ; ssh-add ; screen -SRR deploy &>/dev/null || bash --login
+
+
+Host group2.db1
+  HostName db.example.org
+  User deploy
+  RequestTTY yes
+  RemoteCommand ssh-agent ; ssh-add ; screen -SRR deploy &>/dev/null || bash --login
+
+
+Host group2.db2
+  HostName db.example.net
+  User deploy
+  RequestTTY yes
+  RemoteCommand ssh-agent ; ssh-add ; screen -SRR deploy &>/dev/null || bash --login
+
+

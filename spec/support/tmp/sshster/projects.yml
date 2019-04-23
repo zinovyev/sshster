@@ -1,0 +1,5 @@
+hosts:
+- example.com:
+  user: deploy
+- fooboobar.com:
+  user: admin

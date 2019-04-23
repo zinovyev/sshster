@@ -1,0 +1,15 @@
+hosts:
+  group1:
+    app:
+    - app.example.com:
+    - app.example.net:
+    db:
+    - db.example.org:
+      user: admin
+  group2:
+    app:
+    - app.example.com:
+      user: admin
+    db:
+    - db.example.org:
+    - db.example.net:

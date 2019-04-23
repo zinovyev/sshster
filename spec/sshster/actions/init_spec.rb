@@ -8,7 +8,7 @@ RSpec.describe Sshster::Actions::Init do
   let(:config) do
     {
       'forward_agent' => false,
-      'user_name' => 'deploy',
+      'user' => 'deploy',
       'request_tty' => true,
       'screen_session' => 'deploy',
       'ssh_config' => config_root_path,

@@ -1,4 +1,4 @@
-require 'pry'
+require 'yaml'
 require 'sshster/version'
 require 'sshster/argv_parser'
 require 'sshster/config'

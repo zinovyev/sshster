@@ -1,5 +1,3 @@
-require 'yaml'
-
 module Sshster
   class Config
     attr_accessor :options, :config_path
@@ -28,7 +26,7 @@ module Sshster
     def default_options
       {
         'forward_agent' => true,
-        'user_name' => 'deploy',
+        'user' => 'deploy',
         'request_tty' => true,
         'screen_session' => 'deploy',
         'ssh_config' => default_ssh_config_path,

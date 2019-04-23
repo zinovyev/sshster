@@ -6,7 +6,7 @@ RSpec.describe Sshster::Config do
   let(:default_options) do
     {
       'forward_agent' => true,
-      'user_name' => 'deploy',
+      'user' => 'deploy',
       'request_tty' => true,
       'screen_session' => 'deploy',
       'ssh_config' => '/home/example/.ssh',
@@ -16,7 +16,7 @@ RSpec.describe Sshster::Config do
   let(:merged_options) do
     {
       'forward_agent' => false,
-      'user_name' => 'admin',
+      'user' => 'admin',
       'request_tty' => true,
       'screen_session' => 'admin',
       'ssh_config' => '/home/example/.ssh',

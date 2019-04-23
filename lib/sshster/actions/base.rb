@@ -1,5 +1,3 @@
-require 'pry'
-require 'pry-coolline'
 require 'pathname'
 require 'fileutils'
 

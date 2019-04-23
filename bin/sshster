@@ -1,7 +1,6 @@
 #!/usr/bin/env ruby
 # vim: set syntax=ruby
 
-require 'pry'
 require 'sshster'
 
 Sshster.run(ARGV)
