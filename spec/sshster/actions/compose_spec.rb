@@ -6,6 +6,7 @@ RSpec.describe Sshster::Actions::Compose do
   let(:projects_dir) { config_root_path + '/sshster' }
   let(:projects1_path) { File.expand_path('../../support/projects.yml', __dir__) }
   let(:projects2_path) { File.expand_path('../../support/projects2.yml', __dir__) }
+  let(:resulting_config) { File.expand_path('../../support/config', __dir__) }
 
   let(:config) do
     {
@@ -21,7 +22,7 @@ RSpec.describe Sshster::Actions::Compose do
     described_class.new(config)
   end
 
-  # after(:each) { FileUtils.rm_rf(config_root_path) }
+  after(:each) { FileUtils.rm_rf(config_root_path) }
 
   describe '#run' do
     context 'configuration file exist' do
@@ -35,6 +36,7 @@ RSpec.describe Sshster::Actions::Compose do
       end
 
       it 'compiles ssh configuration file' do
+        expect(File.read(config_path)).to eq(File.read(resulting_config))
       end
     end
   end
