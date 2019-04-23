@@ -10,5 +10,5 @@
 # rspec failure tracking
 .rspec_status
 public/uploads
-sshster-0.1.0.gem
+*.gem
 spec/support/tmp
